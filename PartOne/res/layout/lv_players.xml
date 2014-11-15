@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/ivPlayer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvPlayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvStaticAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvPlayerName"
+        android:layout_below="@+id/tvPlayerName"
+        android:layout_marginTop="15dp"
+        android:text="Age:" />
+
+    <TextView
+        android:id="@+id/tvPlayerAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvStaticAge"
+        android:layout_alignBottom="@+id/tvStaticAge"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/tvStaticAge"
+        android:text="PlayerAge"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/ivGoProfile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/tvPlayerAge"
+        android:layout_alignTop="@+id/tvPlayerName"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/tvPlayerAge"
+        android:scaleX="-1"
+        android:src="@drawable/abc_ic_ab_back_holo_light"
+        android:onClick="ibProfileClick" />
+
+</RelativeLayout>

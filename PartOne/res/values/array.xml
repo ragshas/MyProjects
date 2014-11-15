@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="phoneNo_array">
+        <item>014494901</item>
+        <item>9841919789</item>
+    </string-array>
+</resources>

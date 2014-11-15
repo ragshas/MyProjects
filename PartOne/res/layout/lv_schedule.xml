@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Raghab"
+        android:textColor="@color/White"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/tvHeader"
+        android:layout_below="@+id/tvHeader"
+        android:src="@drawable/calendar_small" />
+
+    <ImageView
+        android:id="@+id/ivStLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/st_line" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivIcon"
+        android:layout_alignRight="@+id/tvHeader"
+        android:layout_toRightOf="@+id/ivIcon"
+		android:typeface="serif"
+        android:textColor="@color/Yellow" />
+    <TextView 
+        android:id="@+id/tvMoreDetails"
+        android:layout_width="105dp"
+        android:layout_height="25sp"
+        android:text="MORE DETAILS"
+        android:layout_below="@+id/tvDate"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:layout_marginTop="5dp"
+        android:background="@color/DarkBlue"
+        android:textColor="@color/White"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/ivMapPin"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/tvMoreDetails"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/tvMoreDetails"
+        android:src="@drawable/map_pin" />
+
+</RelativeLayout>

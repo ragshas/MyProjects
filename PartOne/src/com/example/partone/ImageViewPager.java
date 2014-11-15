@@ -1,0 +1,56 @@
+package com.example.partone;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
+import android.widget.ImageView;
+
+public class ImageViewPager extends ActionBarActivity {
+
+	int position;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setTitle("GALLERY");
+		setContentView(R.layout.view_pager);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		//Intent intent = getIntent();
+		position = getIntent().getExtras().getInt("id");
+
+		GalleryImageAdapter imageAdapter = new GalleryImageAdapter(this);
+		List<ImageView> images = new ArrayList<ImageView>();
+
+		for (int i = 0; i < imageAdapter.getCount(); i++) {
+			ImageView imageView = new ImageView(this);
+			imageView.setImageResource(imageAdapter.imageIDs[i]);
+			imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+			images.add(imageView);
+
+		}
+		
+		//Set the images into ViewPager
+		ImagePagerAdapter pagerAdapter= new ImagePagerAdapter(images);
+		ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+		viewPager.setAdapter(pagerAdapter);
+		//Show Images following the position
+		viewPager.setCurrentItem(position);
+
+	}
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			this.finish();
+			break;
+		default:
+			break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+}

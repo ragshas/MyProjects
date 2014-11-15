@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0099CC"
+    android:padding="05sp"
+    android:id="@+id/contentFrag"
+    tools:context="com.example.partone.MainActivity$PlaceholderFragment" >
+
+    <ImageView
+        android:id="@+id/ivHomeDis"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="Home Image"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_display" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/tvAnnoucement"
+        android:layout_alignParentBottom="true"
+        android:background="@color/DarkBlue"
+        android:gravity="center"
+        android:clickable="true"
+        android:onClick="tvWelClick"
+        android:text="@string/tvWel"
+        android:textColor="@color/White"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/tvAnnoucement"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_above="@+id/tvWelcome"
+        android:layout_alignParentRight="true"
+        android:background="@color/SteelBlue"
+        android:gravity="center"
+        android:clickable="true"
+        android:onClick="tvAnnClick"
+        android:text="@string/TvAncment"
+        android:textColor="@color/White"
+        android:textSize="25dp" />
+
+    <RelativeLayout
+        android:id="@+id/llHome"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_alignLeft="@+id/ivHomeDis"
+        android:layout_below="@+id/ivHomeDis"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/home_linear"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibSchedule"
+            android:layout_width="80dp"
+            android:layout_height="75sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:clickable="true"
+            android:onClick="ibScheduleClick"
+            android:src="@drawable/ib_schedule" />
+
+        <ImageButton
+            android:id="@+id/ibPlayer"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignTop="@+id/ibSchedule"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:onClick="ibPlayerClick"
+            android:src="@drawable/player_icon" />
+
+        <ImageButton
+            android:id="@+id/ibThird"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ibPlayer"
+            android:layout_marginRight="19dp"
+            android:clickable="true"
+            android:onClick="ibThird"
+            android:src="@drawable/ib_schedule" />
+    </RelativeLayout>
+
+</RelativeLayout>

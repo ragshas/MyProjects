@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/event_background" >
+
+    <Button
+        android:id="@+id/bEventsName"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="116dp"
+        android:background="@color/LimeGreen"
+        android:text="Raghab"
+        android:textSize="25sp"
+        android:textColor="@color/White" />
+
+    <Button
+        android:id="@+id/bEventsTime"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/bEventsName"
+        android:background="@color/LimeGreen"
+        android:text="Button"
+        android:textColor="@color/White" />
+
+</RelativeLayout>
