@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:focusable="true"
+    android:addStatesFromChildren="true"
+    android:background="?android:attr/actionBarItemBackground"
+    style="?android:attr/actionButtonStyle"
+    >
+    
+<ImageButton android:id="@+id/ibSearch"
+    android:background="@drawable/abc_ic_search_api_holo_light"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:layout_gravity="center"
+    android:scaleType="fitCenter"
+    android:adjustViewBounds="true"/>
+<TextView 
+    android:id="@+id/tv1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Some Text"
+    android:textAppearance="?android:attr/textAppearanceLarge"/>
+</LinearLayout>

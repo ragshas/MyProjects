@@ -1,0 +1,28 @@
+package com.example.appfootball;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class RssChannelActivity extends Activity{
+	
+	//A Reference to this Activity
+	private RssChannelActivity local;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_rss_channel);
+		
+		//Get the Rss URl that was set in the RssTabActivity
+		String rssUrl = (String)getIntent().getExtras().get("rss-url");
+		
+		//Set reference to this activity
+		local = this;
+		//GetRSSDataTask task = new GetRSSDataTask();
+		
+		//Start process Rss Task
+		//task.execute(rssUrl);
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.example.appfootball;
+
+import android.app.TabActivity;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+
+@SuppressWarnings("deprecation")
+public class RssTabsActivity extends TabActivity{
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_rss_tabs);
+	}
+
+}

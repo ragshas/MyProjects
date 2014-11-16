@@ -1,0 +1,13 @@
+package com.example.appfootball.rss;
+
+import com.example.appfootball.R.string;
+
+public class RssReader {
+
+	//Our class has an attribute which represents RSS Feed URL
+	private String rssUrl;
+	
+	public RssReader(String rssUrl){
+		this.rssUrl = rssUrl;
+	}
+}

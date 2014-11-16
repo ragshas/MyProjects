@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PartOne</string>
+    <string name="title_section1">HOME</string>
+    <string name="title_section2">EVENTS</string>
+    <string name="title_section3">EVENTS DETAILS</string>
+    <string name="title_section4">GALLERY</string>
+    <string name="title_section5">ABOUT CLUB</string>
+    <string name="title_section6">TESTIMONIALS</string>
+    <string name="title_section7">SPONSERS</string>
+    <string name="title_section8">RSS Feed</string>
+    <string name="title_section9">WEATHER</string>
+    <string name="share">Share</string>
+    <string name="action_search">Settings</string>
+    <string name="action_compose">Compose</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="txtAbout">About</string>
+    <string name="TvAncment">Annoucement</string>
+    <string name="tvWel">Welcome to Sports App</string>
+    <string name="title_activity_schedule">Schedule</string>
+    <string name="playerTitle">Players</string>
+    <string name="pick_number">Select Number to Call</string>
+
+    <!-- Rss Tabs -->
+    <string name="tab_art">ART</string>
+    <string name="tab_tech">ART</string>
+    <string name="tab_sports">ART</string>
+    <!-- For Weather Applications -->
+    <string name="change_city">Change City</string>
+    <!-- Icons and APP ID -->
+    <string name="open_weather_maps_app_id">f68f5d713393a86da757e9d2918143ce</string>
+    <string name="weather_sunny">&#xf00d;</string>
+    <string name="weather_clear_night">&#xf02e;</string>
+    <string name="weather_foggy">&#xf014;</string>
+    <string name="weather_cloudy">&#xf013;</string>
+    <string name="weather_rainy">&#xf019;</string>
+    <string name="weather_snowy">&#xf01b;</string>
+    <string name="weather_thunder">&#xf01e;</string>
+    <string name="weather_drizzle">&#xf01c;</string>
+    <string name="place_not_found">Sorry, no weather data found.</string>
+
+</resources>

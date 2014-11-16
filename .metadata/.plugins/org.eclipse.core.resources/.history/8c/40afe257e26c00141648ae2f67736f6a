@@ -1,0 +1,24 @@
+package com.example.appfootball.rss;
+
+import java.util.List;
+
+import android.app.Activity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class ListListener implements OnItemClickListener{
+
+	//Our Listener will contain a reference to the list of RSS items
+	//List item's reference
+	List<RssItem> listItems;
+	//And a reference to a calling activity
+	//Calling activity reference
+	Activity activity
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.example.appfootball;
+
+public class RssItem {
+	
+	//Item title
+	private String title;
+	//Item Link
+	private String link;
+	
+	private String getTitle(){
+		return title;
+	}
+	private void setTitle(String title){
+		this.title = title;
+	}
+	private String getLink(){
+		return link;
+	}
+	
+
+}

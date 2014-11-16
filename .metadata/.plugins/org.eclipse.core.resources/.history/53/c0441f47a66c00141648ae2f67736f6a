@@ -1,0 +1,35 @@
+package com.example.partone;
+
+import android.os.Bundle;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import android.support.v7.app.ActionBarActivity;
+
+public class GoogleMaps extends ActionBarActivity{
+
+	static final LatLng officeLocation = new LatLng(
+			27.694987, 85.335716);
+	
+	private GoogleMap googleMap;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_map);
+		try {
+			if(googleMap == null){
+				googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+			}
+			googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+			Marker OL = googleMap.addMarker(new MarkerOptions().position(officeLocation).title("My Office Location"));
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+}

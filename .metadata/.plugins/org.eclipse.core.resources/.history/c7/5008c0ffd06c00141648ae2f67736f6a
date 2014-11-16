@@ -1,0 +1,5 @@
+package com.example.appfootball.rss;
+
+public class RssReader {
+
+}

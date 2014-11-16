@@ -1,0 +1,60 @@
+package com.example.partone;
+
+import com.example.partone.R;
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+
+public class EventsArrayAdapter extends ArrayAdapter<String> {
+	private final Activity context;
+	private final String[] eventName;
+	private final String[] eventTime;
+	Button bEventsName;
+
+	public EventsArrayAdapter(Activity context, String[] eventName,
+			String[] eventTime) {
+		// TODO Auto-generated constructor stub
+		super(context, R.layout.lv_events, eventName);
+		this.context = context;
+		this.eventName = eventName;
+		this.eventTime = eventTime;
+	}
+
+	@Override
+	public View getView(final int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+
+		LayoutInflater inflater = context.getLayoutInflater();
+		View rowView = inflater.inflate(R.layout.lv_events, null, true);
+
+		final Button bEName = (Button) rowView.findViewById(R.id.bEventsName);
+		Button bETime = (Button) rowView.findViewById(R.id.bEventsTime);
+
+		bEName.setText(eventName[position]);
+		bETime.setText(eventTime[position]);
+
+		bEName.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Fragment f = null;
+				f = new EventsDetailsFragment();
+				Bundle args = new Bundle();
+				args.putString("Id", eventName[position]);
+				f.setArguments(args);
+				FragmentTransaction ft = ((FragmentActivity) context)
+						.getSupportFragmentManager().beginTransaction();
+				ft.replace(R.id.container, f).addToBackStack(null).commit();
+			}
+		});
+		return rowView;
+	}
+
+}

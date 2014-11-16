@@ -1,0 +1,48 @@
+package com.example.partone;
+
+import com.example.appfootball.R;
+
+import android.content.Context;
+import android.support.v4.view.ActionProvider;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+public class CustomActionProvider extends ActionProvider {
+
+	Context mContext;
+
+	public CustomActionProvider(Context context) {
+		super(context);
+		mContext = context;
+		
+	}
+
+	@Override
+	public View onCreateActionView() {
+		// Generate custom Layout for the Action Bar menu Item
+		
+		LayoutInflater inflater = LayoutInflater.from(mContext);
+		View view = inflater.inflate(R.layout.action_provider, null);
+		ImageButton button = (ImageButton)view.findViewById(R.id.ibSearch);
+		
+		button.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(mContext, "Action Provider Click", Toast.LENGTH_SHORT).show();
+				
+			}
+		});
+		return view;
+	}
+	
+	@Override
+	public boolean onPerformDefaultAction() {
+		// TODO Auto-generated method stub
+		Toast.makeText(mContext, "Action Provider Click", Toast.LENGTH_SHORT).show();
+		return true;
+	}
+
+}

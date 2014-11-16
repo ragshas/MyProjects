@@ -1,0 +1,7 @@
+package com.example.appfootball;
+
+import android.support.v7.app.ActionBarActivity;
+
+public class RssTabsActivity extends ActionBarActivity{
+
+}

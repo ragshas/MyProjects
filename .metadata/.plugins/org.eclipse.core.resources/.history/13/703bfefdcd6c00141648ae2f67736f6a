@@ -1,0 +1,26 @@
+package com.example.appfootball;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.xml.sax.helpers.DefaultHandler;
+
+public class RssParseHandler extends DefaultHandler{
+	
+	//List of items parsed
+	private List<RssItem> rssItems;
+	//We have a local reference to an object which is constructed while parser is working on an item tag
+	//Used to reference item while parsing
+	
+	private RssItem currentItem;
+	//We have two indicators which are used to differentiate whether a tag title or link is being processed by the parser
+	//parsing title indicator
+	private boolean parsingTitle;
+	//Parsing link indicator
+	private boolean parsingLink;
+	
+	public RssParseHandler(){
+		rssItems = new ArrayList();
+	}
+
+}

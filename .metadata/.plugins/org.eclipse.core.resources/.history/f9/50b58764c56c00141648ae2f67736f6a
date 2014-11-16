@@ -1,0 +1,26 @@
+package com.example.appfootball;
+
+import android.app.TabActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TabHost;
+
+@SuppressWarnings("deprecation")
+public class RssTabsActivity extends TabActivity{
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_rss_tabs);
+		
+		//Get the TabHost
+		TabHost tabHost = getTabHost();
+		
+		//Art tab
+		Intent artIntent = new Intent().setClass(this, RssChannelActivity.class);
+		// Set Art category RSS URL
+		artIntent.putExtra("rss-url", "http://feeds.reuters.com/news/artsculture?format=xml");
+	}
+
+}
