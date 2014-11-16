@@ -1,0 +1,90 @@
+package com.example.appfootball;
+
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.widget.RelativeLayout.LayoutParams;
+import android.widget.TextView;
+
+public class WelcomeSplash extends Activity {
+	TextView display;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_welcome_splash);
+
+		display = (TextView) findViewById(R.id.tvDisplay);
+		executeTimer();
+		showRandom();
+	}
+
+	private void showRandom() {
+		// TODO Auto-generated method stub
+		Thread t = new Thread() {
+			LayoutParams params = (LayoutParams) display.getLayoutParams();
+			DisplayMetrics metrics = new DisplayMetrics();
+
+			@Override
+			public void run() {
+				try {
+					while (!isInterrupted()) {
+						Thread.sleep(0400);
+						runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+								// update TextView here!
+								Random rand = new Random();
+								display.setText("UNITED");
+								display.setTextSize(rand.nextInt(75));
+								display.setTextColor(Color.rgb(
+										rand.nextInt(265), rand.nextInt(265),
+										rand.nextInt(265)));
+
+								getWindowManager().getDefaultDisplay()
+										.getMetrics(metrics);
+								params.leftMargin = new Random()
+										.nextInt(metrics.widthPixels
+												- display.getWidth());
+								params.topMargin = new Random()
+										.nextInt(metrics.heightPixels - 2
+												* display.getHeight());
+								display.setLayoutParams(params);
+
+							}
+						});
+					}
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+
+		t.start();
+	}
+
+	// Self closing the activity
+	private void executeTimer() {
+		// TODO Auto-generated method stub
+
+		Timer t = new Timer();
+		t.schedule(new TimerTask() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				finish();
+
+			}
+		}, 5000);
+
+	}
+
+}

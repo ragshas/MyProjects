@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/LimeGreen"
+     >
+    <TextView 
+        android:id="@+id/tvTmBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/White"/>
+    <TextView 
+        android:id="@+id/tvTmComposer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTmBody"
+        android:textSize="18sp"
+        android:textColor="@color/Yellow"
+        android:textStyle="italic"/>
+
+</RelativeLayout>

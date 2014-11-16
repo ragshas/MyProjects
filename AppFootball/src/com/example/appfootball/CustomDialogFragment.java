@@ -1,0 +1,79 @@
+package com.example.appfootball;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class CustomDialogFragment extends DialogFragment implements
+		OnClickListener {
+
+	static CustomDialogFragment newInstance() {
+		return new CustomDialogFragment();
+	}
+
+	TextView tv1, tv2, tv3;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+		getDialog().setCanceledOnTouchOutside(true);
+
+		View v = inflater.inflate(R.layout.custom_dialog, container, false);
+		tv1 = (TextView) v.findViewById(R.id.tvDialog1);
+		tv2 = (TextView) v.findViewById(R.id.tvDialog2);
+		tv3 = (TextView) v.findViewById(R.id.tvDialog3);
+
+		tv1.setOnClickListener(this);
+		tv2.setOnClickListener(this);
+		tv3.setOnClickListener(this);
+
+		return v;
+	}
+
+	public void onResume() {
+		super.onResume();
+		Window window = getDialog().getWindow();
+		window.setLayout(500, 300);
+		window.setGravity(Gravity.CENTER);
+		// TODO:
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		String num;
+		Intent intent = new Intent(Intent.ACTION_CALL);
+		switch (v.getId()) {
+		case R.id.tvDialog1:
+			num = tv1.getText().toString();
+			
+			intent.setData(Uri.parse("tel:" + num));
+			startActivity(intent);
+			break;
+		case R.id.tvDialog2:
+			 num = tv2.getText().toString();
+				intent.setData(Uri.parse("tel:" + num));
+				startActivity(intent);
+			break;
+		case R.id.tvDialog3:
+			num = tv3.getText().toString();
+			Toast.makeText(getActivity(), "Selected Number is Empty " + getId(),
+					Toast.LENGTH_LONG).show();
+			break;
+		default:
+			break;
+		}
+	}
+
+}
