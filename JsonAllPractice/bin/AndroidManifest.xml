@@ -32,6 +32,14 @@
             android:name=".JsonExample_MultipleListView"
             android:label="@string/title_activity_json_example__multiple_list_view" >
         </activity>
+        <activity
+            android:name=".ListViewActivity1"
+            android:label="@string/title_activity_list_view_activity1" >
+        </activity>
+        <activity
+            android:name=".SingleListItem"
+            android:label="@string/title_activity_single_list_item" >
+        </activity>
     </application>
 
 </manifest>

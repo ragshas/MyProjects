@@ -14,7 +14,7 @@ import android.widget.ListView;
 
 public class MenuList extends ListActivity {
 
-	String classes[] = {"JsonExample1", "JsonExample_MultipleListView"};
+	String classes[] = {"JsonExample1", "JsonExample_MultipleListView", "ListViewActivity1","JsonContacts"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

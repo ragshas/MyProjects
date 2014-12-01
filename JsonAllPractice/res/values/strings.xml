@@ -10,5 +10,7 @@
     <string name="url">Website</string>
     <string name="title_activity_json_example__multiple_list_view">JsonExample_MultipleListView</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_list_view_activity1">ListViewActivity1</string>
+    <string name="title_activity_single_list_item">SingleListItem</string>
 
 </resources>
