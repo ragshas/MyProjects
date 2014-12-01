@@ -40,6 +40,10 @@
             android:name=".SingleListItem"
             android:label="@string/title_activity_single_list_item" >
         </activity>
+        <activity
+            android:name=".JsonContacts"
+            android:label="@string/title_activity_json_contacts" >
+        </activity>
     </application>
 
 </manifest>
