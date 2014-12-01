@@ -44,6 +44,10 @@
             android:name=".JsonContacts"
             android:label="@string/title_activity_json_contacts" >
         </activity>
+        <activity
+            android:name=".SingleContactActivity"
+            android:label="@string/title_activity_single_contact" >
+        </activity>
     </application>
 
 </manifest>
