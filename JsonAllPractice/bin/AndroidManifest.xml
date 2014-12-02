@@ -48,6 +48,10 @@
             android:name=".SingleContactActivity"
             android:label="@string/title_activity_single_contact" >
         </activity>
+        <activity
+            android:name=".JsonWingnity"
+            android:label="@string/title_activity_json_wingnity" >
+        </activity>
     </application>
 
 </manifest>
